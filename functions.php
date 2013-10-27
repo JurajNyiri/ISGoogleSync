@@ -7,7 +7,7 @@ My portfolio: jurajnyiri.eu. Contact: juraj.nyiri@gmal.com
 
 You are free to modify source code (and update changes and modifications to cal.jurajnyiri.eu).
 You are FORBIDDEN to modify or delete this comment about author etc.
-If you copy anything from this code you also have to copy this comment.
+If you copy substantial portions from this code you also have to copy this notice.
 Please respect this :).
 
 If you find any bugs, please report at http://cal.jurajnyiri.eu .
