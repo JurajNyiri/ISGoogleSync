@@ -1,7 +1,7 @@
 ISGoogleSync
 ============
 
-Script that syncs IS calendar with IS MUNI system calendar.
+Script that syncs IS MUNI calendar with Google calendar.
 
 Want to donate?
 
