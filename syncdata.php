@@ -38,6 +38,9 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
+if (is_file('run.txt')) die('Run.txt exists.'); // proti viacnasobnemu spusteniu
+file_put_contents('run.txt', '');
+
 	include "config.php";
 	include "functions.php";
 	set_time_limit(86400); //maximálny čas na exekúciu jeden deň, defaultných 30 sekúnd by občas nestačilo, záleží od rýchlosti serverov
@@ -74,4 +77,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			AddToGoogleCalendar($client, $appCalUrl, $events, $config);
 		}
 	}
+unlink('run.txt');
 ?>
