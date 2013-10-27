@@ -9,6 +9,7 @@ Paypal: juraj.nyiri@gmail.com
 Thanks! :)
 
 
+
 Do you have a free hosting / can't run cron?
 
 No problem, send me a link to syncdata.php and it will be automaticly executed every 24 hours.
