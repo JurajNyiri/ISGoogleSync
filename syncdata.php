@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 V1.0
 Script created by Juraj Nyíri, 29.10.2013.
@@ -50,7 +50,7 @@ file_put_contents('run.txt', '');
 	
 	
 	//ziskanie cookies po prihlaseni
-	$cookies = Login($username->IS,$password->IS);
+	$cookies = Login($username->IS,$password->IS, $config);
 	
 	if($cookies !== false) //prihlasenie do IS uspesne
 	{
@@ -61,7 +61,7 @@ file_put_contents('run.txt', '');
 		$caljson = DecodeJson($iskalendar);
 		
 		//prekonvertovanie IS dat do spracovatelnejsej (a citatelnejsej) formy pre Google Kalendar
-		$events = ConvertISDataToGData($caljson);
+		$events = ConvertISDataToGData($caljson, $config);
 		
 		//prihlasenie sa do google a ziskanie kalendar adresy
 		$data = GoogleLogin($username->Google, $password->Google, $config);
