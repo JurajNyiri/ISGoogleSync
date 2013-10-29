@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 V1.0
 Script created by Juraj Nyíri, 29.10.2013.
@@ -40,7 +40,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		return substr($str,(strpos($str,$zac)+strlen($zac)),-(strlen($str)-strpos($str,$kon)-1));
 	}
 	
-	function Login($user, $pass) //prihlásenie do IS cez SSL a získanie cookies
+	function Login($user, $pass, $config) //prihlásenie do IS cez SSL a získanie cookies
 	{
 		$data = array(
      		'credential_0' => $user,
@@ -185,7 +185,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	}
 	
 	//prekonvertovanie IS dat do spracovatelnejsej (a citatelnejsej) formy pre Google Kalendar
-	Function ConvertISDataToGData($jsondata)
+	Function ConvertISDataToGData($jsondata, $config)
 	{
 		$eventcislo = 0;
 		foreach($jsondata as $day=>$arraydna)
